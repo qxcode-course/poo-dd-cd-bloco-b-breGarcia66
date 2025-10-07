@@ -1,0 +1,32 @@
+version: '0.2'
+sources:
+- database: local
+  link: ''
+  cache_path: ''
+  cache_timestamp: ''
+  filters: null
+- database: poo
+  link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  cache_path: 'C:\Users\MechaComputer2077\Documents\Estudos\UFC - 2025.2\Programação
+
+
+
+
+
+
+
+    para Design\Unidade 2\poo-dd-cd-bloco-b-breGarcia66\myrep\.tko\cache\poo.md'
+  cache_timestamp: '2025-10-07 15:51:02'
+  filters:
+  - acesso
+  - simples
+expanded: []
+tasks: {}
+flags:
+  quests: 2
+  tracks: 0
+  tasks: 0
+  graph: 1
+  xray: 0
+lang: py
+selected: poo@bloco_b-modificadores-de-acesso
