@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-07_20-00-00",
+            "content": "class Watch:\n    def __init__(self, hour: int, minute: int, seconds: int):\n        self.__hour    = self.setHour(hour);\n        self.__minute  = self.setMinute(minute);\n        self.__seconds = self.setSeconds(seconds);\n\n    def __str__(self) -> str:\n        return f\"{self.getHour():.2d}:{self.getMinute():.2d}:{self.getSeconds():.2d}\";\n    \n    # M\u00e9todos de busca\n\n    def getHour(self) -> str:\n        return self.__hour;\n\n    def getMinute(self) -> str:\n        return self.__minute;\n\n    def getSeconds(self) -> str:\n        return self.__seconds;\n\n    # M\u00e9todos mutantes\n\n    def setHour(self, value):\n        if value < 0 or value > 23:\n            print(\"fail: hora invalida\");\n            return;\n\n        self.__hour = value;\n    \n    def setMinute(self, value):\n        if value < 0 or value > 59:\n            print(\"fail: minuto invalido\");\n            return;\n\n        self.__minute = value;\n    \n    def setSeconds(self, value):\n        if value < 0 or value > 59:\n            print(\"fail: segundo invalido\");\n            return;\n\n        self.__minute = value;\n\n    # M\u00e9todo incrementar tempo\n\n    def nextScond(self):\n        self.setSeconds(self.setSeconds + 1);\n\n        if self.getSeconds() > 59:\n            self.setSeconds(0);\n            self.setMinute(self.getMinute() + 1);\n\n        if self.getMinute() > 59:\n            self.setMinute(0);\n            self.setHour(self.getHour() + 1);\n\n        if self.getHour() > 59:\n            self.setHour(0);\n            self.setMinute(0);\n            self.setSeconds(0);\n\n        return;\n\nrelogio = Watch(16, 59, 30);\n\nprint(relogio);",
+            "lines": "66"
+        }
+    ]
+}

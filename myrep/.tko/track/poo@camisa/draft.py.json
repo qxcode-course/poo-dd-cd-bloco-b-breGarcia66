@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-07_19-14-33",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho = \"\";\n\n    def getTamanho(self) -> str:\n        return self.__tamanho;\n\n    def setTamanho(self, valor: str):\n        tamanhosValidos = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"];\n\n        if valor not in tamanhosValidos:\n            print(\"erro: tamanho invalido\");\n            return;\n\n        self.__tamanho = valor;\n\ncamisa = Camisa();\n\nwhile camisa.getTamanho() == \"\":\n    camisa.setTamanho(input(\"Tamanho da comisa:\\n\").upper());\n\nprint(f\"Sua camisa tem tamanho {camisa.getTamanho()}\");",
+            "lines": "22"
+        }
+    ]
+}

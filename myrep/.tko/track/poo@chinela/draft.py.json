@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-07_19-06-18",
+            "content": "@@ -186,18 +186,19 @@\n or %3C 20 \n-or\n+and\n  valor %3E\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-10-07_19-08-21",
+            "content": "@@ -200,18 +200,19 @@\n or %3E 50 \n-or\n+and\n  valor %25\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-10-07_19-09-28",
+            "content": "class Chinelo:\n    def __init__(self):\n        self.__tamanho = 0;\n\n    def getTamanho(self) -> int:\n        return self.__tamanho;\n\n    def setTamanho(self, valor: int):\n        if valor < 20 or valor > 50 or valor % 2 != 0:\n            print(\"erro: valor invalido\");\n            return;\n\n        self.__tamanho = valor;\n\nchinelo = Chinelo();\nwhile chinelo.getTamanho() == 0:\n    chinelo.setTamanho(int(input(\"Tamanho do chinelo:\\n\")));\n\nprint(f\"O seu chinelo tem o tamanho {chinelo.getTamanho()}\");",
+            "lines": "19"
+        }
+    ]
+}
