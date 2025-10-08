@@ -7,16 +7,16 @@ sources:
   filters: null
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-  cache_path: /workspaces/poo-dd-cd-bloco-b-breGarcia66/myrep/.tko/cache/poo.md
-  cache_timestamp: '2025-10-07 19:00:46'
+  cache_path: C:\Users\MechaComputer2077\Documents\Estudos\UFC - 2025.2\Programação
+    para Design\Unidade 2\poo-dd-cd-bloco-b-breGarcia66\myrep\.tko\cache\poo.md
+  cache_timestamp: '2025-10-08 12:16:21'
   filters:
   - acesso
   - simples
 expanded:
 - poo@campanha-principal
 - poo@bloco_b-modificadores-de-acesso
-tasks:
-  poo@roupa: '{rate:100}'
+tasks: {}
 flags:
   quests: 2
   tracks: 0
@@ -24,4 +24,4 @@ flags:
   graph: 1
   xray: 0
 lang: py
-selected: poo@bloco_b-agregação-simples
+selected: poo@relogio
