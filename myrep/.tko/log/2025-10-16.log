@@ -1,0 +1,7 @@
+2025-10-16 14:04:12, MOVE, v:1, k:poo@notebook, mode:DOWN
+2025-10-16 14:30:54, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-16 14:30:55, EXEC, v:1, k:poo@notebook, mode:FREE, size:37
+2025-10-16 14:31:04, MOVE, v:1, k:poo@notebook, mode:BACK
+2025-10-16 14:36:35, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-16 14:36:35, EXEC, v:1, k:poo@notebook, mode:FREE, size:54
+2025-10-16 14:36:47, MOVE, v:1, k:poo@notebook, mode:BACK
