@@ -1,83 +1,51 @@
-# Criando classe Notebook
-
-class Notebook:
-    def __init__(self):
-        self.__ligado: bool = False;
-        self.__bateria: Bateria | None = None;
-
-    # método string
-    def __str__(self) -> str:
-        return f'status: {'ligado' if True else 'desligado'}';
-
-    # método de acesso
-    def getLigado(self) -> bool:
-        return self.__ligado;
-
-    def getBateria(self) -> Bateria | None:
-
-    # método de mutação
-    def setLigado(self, value: bool):
-        self.__ligado = value
-
-    # métodos do objeto
-    def ligar(self):
-        if self.__bateria.getCarga() == 0:
-            print('nao foi possivel ligar');
-            return;
-    
-        self.setLigado(True);
-
-    def desligar(self):
-        if self.getLigado() == True:
-            self.setLigado(False);
-            print('notebook desligado');
-
-    def usar(self, time: int):
-        if self.getLigado() == False:
-            print('erro: ligue o notebook primeiro');
-            return;
-
-        if time > self.__bateria.getCarga():
-
-        print(f'usando notebook por {time} minutos');
-
-# Criando classe Bateria
-class Bateria:
-    def __init__(self, capacidade: int):
-        self.__carga: int = capacidade;
-        self.__capacidade: int = capacidade;
-
-    # Métodos de acesso
-    def getCarga(self) -> int:
-        return self.__carga;
-
-    def getCapacidade(self) -> int:
-        return self.__capacidade;
-    
-    # Métodos de mutações
-    def setCarga(self, value):
-        self.__carga += value;  
-        if self.getCarga() > self.getCapacidade():
-            self.__carga = self.getCapacidade();
-
-    def setCapacidade(self, value):
-        if value > 0:
-            self.__capacidade = value;
-            return;
-
-        print('capacidade de bateria inválida');
-
+from notebook import Notebook;
+from bateria import Bateria;
+from carregador import Carregador;
 
 # Main
 
-notebook: Notebook = Notebook();
-print(notebook);
-notebook.usar(10);
+notebook = Notebook() # criando notebook
+notebook.mostrar()    # msg: Status: Desligado, Bateria: Nenhuma, Carregador: Desconectado
+notebook.ligar()      # msg: não foi possível ligar
+notebook.usar(10)     # msg: notebook desligado
 
-notebook.ligar();
-print(notebook);
-notebook.usar(10);
+print('\n');
 
-notebook.desligar();
+bateria = Bateria(50) # criando bateria que suporta 50 minutos e começa carregada
+bateria.mostrar()     # (50/50)
+notebook.setBateria(bateria) # coloca a bateria no notebook
 
+print('\n');
 
+notebook.mostrar() # msg: Status: Desligado, Bateria: (50/50), Carregador: Desconectado
+notebook.ligar()   # msg: notebook ligado
+notebook.mostrar() # msg: Status: Ligado, Bateria: (50/50), Carregador: Desconectado
+notebook.usar(30)  # msb: Usando por 30 minutos
+notebook.mostrar() # msg: Status: Ligado, Bateria: (20/50), Carregador: Desconectado
+notebook.usar(30)  # msb: Usando por 20 minutos, notebook descarregou
+notebook.mostrar() # msg: Status: Desligado, Bateria: (0/50), Carregador: Desconectado
+
+print('\n');
+
+bateria = notebook.rmBateria() # msg: bateria removida
+bateria.mostrar()  # (0/50)
+notebook.mostrar() # msg: Status: Desligado, Bateria: Nenhuma, Carregador: Desconectado
+
+print('\n');
+
+carregador = Carregador(2) # criando carregador com 2 de potencia
+carregador.mostrar() # (Potência 2)
+
+print('\n');
+
+notebook.setCarregador(carregador) # adicionando carregador no notebook
+notebook.mostrar() # msg: Status: Desligado, Bateria: Nenhuma, Carregador: (Potência 2)
+notebook.ligar()   # msg: notebook ligado
+notebook.mostrar() # msg: Status: Ligado, Bateria: Nenhuma, Carregador: (Potência 2)
+
+print('\n');
+
+notebook.setBateria(bateria)
+notebook.mostrar() # msg: Status: Ligado, Bateria: (0/50), Carregador: (Potência 2)
+notebook.usar(10)  # msg: Notebook utilizado com sucesso
+notebook.mostrar() # msg: Status: Ligado, Bateria: (20/50), Carregador: (Potência 2)
