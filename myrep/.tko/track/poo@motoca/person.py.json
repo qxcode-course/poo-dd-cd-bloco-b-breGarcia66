@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-24_00-50-40",
+            "content": "@@ -486,206 +486,29 @@\n     \n-def setAge(self, value):%0A        if value %3C 0:%0A            print('fail: idade invalida');%0A            return;%0A%0A        self.__age = value;%0A%0A    def setName(self, value):%0A        self.__name = value;\n+    #N%C3%A3o %C3%A9 necess%C3%A1rio\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-10-24_00-58-32",
+            "content": "@@ -85,12 +85,8 @@\n  int\n- = 0\n , na\n@@ -96,13 +96,8 @@\n  str\n- = ''\n ):%0A \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-24_00-59-57",
+            "content": "# criando classe person\n\nclass Person:\n\n    # construtor\n    def __init__(self, age: int = 0, name: str = ''):\n        self.__age = age;\n        self.__name = name;\n    # fim construtor\n\n    # m\u00e9todo string\n    def __str__(self):\n        return f\"{self.getName()}:{self.getAge()}\";\n    # fim m\u00e9todo string\n\n    # m\u00e9todo de acesso\n    def getAge(self) -> int:\n        return self.__age;\n\n    def getName(self) -> str:\n        return self.__name;\n    # fim m\u00e9todo de acesso\n\n    # m\u00e9todo mutante\n    def setAge(self, value):\n        if value < 0:\n            print('fail: idade invalida');\n            return;\n\n        self.__age = value;\n\n    def setName(self, value):\n        self.__name = value;\n    # fim m\u00e9todo mutante",
+            "lines": "34"
+        }
+    ]
+}

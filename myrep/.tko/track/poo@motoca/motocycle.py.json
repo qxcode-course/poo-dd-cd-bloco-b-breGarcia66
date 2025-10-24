@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-24_00-50-40",
+            "content": "@@ -426,53 +426,8 @@\n on()\n- if self.getPerson() is not None else 'empty'\n %7D)%22;\n",
+            "lines": "93"
+        },
+        {
+            "label": "2025-10-24_00-53-56",
+            "content": "@@ -1285,26 +1285,8 @@\n e;%0A%0A\n-        else:%0A    \n     \n@@ -1313,20 +1313,16 @@\n essoa);%0A\n-    \n         \n",
+            "lines": "93"
+        },
+        {
+            "label": "2025-10-24_01-09-46",
+            "content": "from person import Person;\n\n# criando classe motocycle\n\nclass MotoCycle:\n\n    # construtor\n    def __init__(self, person: Person = None, power: int = 1, time: int = 0):\n        self.__person: Person | None = person;\n        self.__power = power;\n        self.__time = time;\n    # fim construtor\n\n    # m\u00e9todo string\n    def __str__(self):\n        return f\"power:{self.getPower()}, time:{self.getTime()}, person:({self.getPerson() if self.getPerson() is not None else 'empty'})\";\n    # fim m\u00e9todo string\n\n    # metodo de acesso\n    def getPerson(self) -> Person | None:\n        return self.__person;\n\n    def getPower(self) -> int:\n        return self.__power;\n\n    def getTime(self) -> int:\n        return  self.__time;\n    # fim m\u00e9todo de acesso\n\n    # m\u00e9todo mutante\n    def setPerson(self, person: Person):\n        self.__person = person;\n\n    def setPower(self, value: int):\n        if value < 0:\n            print('fail: potencia de motoca inv\u00e1lida');\n            return;\n    \n        self.__power = value;\n\n    def setTime(self, value):\n        self.__time = value;\n    # fim m\u00e9todo mutante\n\n    # m\u00e9todo pr\u00f3prio do objeto\n    def inserir(self, pessoa: Person) -> bool:\n        if self.getPerson() is not None:\n            print('fail: busy motorcycle');\n            return False;\n\n        else:\n            self.setPerson(pessoa);\n            return True;\n\n    def remover(self) -> Person | None:\n        if self.getPerson() is None:\n            print('fail: empty motorcycle');\n            return;\n        \n        oldPessoa = self.getPerson();\n        self.setPerson(None);\n        return oldPessoa;\n\n    def buyTime(self, value: int):\n        if value < 0:\n            print('fail: valor invalido para comprar tempo');\n            return;\n\n        self.setTime(self.getTime() + value);\n\n    def drive(self, time: int):\n        if self.getTime() == 0:\n            print('fail: buy time first');\n            return;\n\n        if self.getPerson() is None:\n            print('fail: empty motorcycle')\n            return;\n\n        if self.getPerson().getAge() > 10:\n            print('fail: too old to drive');\n            return;\n\n        if time >= self.getTime():\n            print(f'fail: time finished after {self.getTime()} minutes');\n            self.setTime(0);\n            return;\n\n        self.setTime(self.getTime() - time);\n\n    def honk(self):\n        powerHonk = 'e' * self.getPower();\n        print(f'P{powerHonk}m');\n    # fim m\u00e9todo pr\u00f3prio do objeto\n",
+            "lines": "94"
+        }
+    ]
+}

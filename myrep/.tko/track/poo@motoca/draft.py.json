@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-24_00-50-40",
+            "content": "@@ -1040,13 +1040,4 @@\n o');\n-%0A%0Amain();\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-10-24_00-51-44",
+            "content": "@@ -1043,42 +1043,10 @@\n ;%0A%0Am\n-otoca2 = MotoCycle();%0A%0Aprint(motoca2\n+ain(\n );\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-10-24_00-53-56",
+            "content": "@@ -1039,14 +1039,46 @@\n do');%0A%0Am\n-ain(\n+otoca2 = MotoCycle();%0A%0Aprint(motoca2\n );\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-24_00-55-07",
+            "content": "@@ -455,17 +455,17 @@\n Person(n\n-a\n+o\n me = arg\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-10-24_00-55-36",
+            "content": "@@ -126,43 +126,8 @@\n e();\n-%0A        pessoa: Person = Person();\n %0A%0A  \n@@ -436,17 +436,70 @@\n   pessoa\n-.\n+: Person = Person(name = args%5B1%5D, age = int(args%5B2%5D));\n %0A       \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-10-24_00-58-32",
+            "content": "@@ -476,70 +476,8 @@\n soa.\n-setName(args%5B1%5D);%0A                pessoa.setAge(int(args%5B2%5D));\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-10-24_00-59-12",
+            "content": "@@ -1086,142 +1086,11 @@\n );%0A%0A\n-# \n main();\n-%0A%0A%0AmotocaTeste = MotoCycle();%0ApessoaTeste = Person('Jurandi', 5);%0A%0Aretortno = motocaTeste.inserir(pessoaTeste);%0Aprint(retortno);%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-24_01-01-28",
+            "content": "@@ -1082,16 +1082,18 @@\n ido');%0A%0A\n+# \n main();%0A\n@@ -1094,18 +1094,16 @@\n in();%0A%0A%0A\n-# \n motocaTe\n@@ -1121,18 +1121,16 @@\n ycle();%0A\n-# \n pessoaTe\n@@ -1158,18 +1158,16 @@\n ', 5);%0A%0A\n-# \n retortno\n@@ -1203,18 +1203,16 @@\n Teste);%0A\n-# \n print(re\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-10-24_01-02-25",
+            "content": "@@ -539,39 +539,8 @@\n ));%0A\n-                print(pessoa);%0A\n     \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-10-24_01-03-13",
+            "content": "@@ -585,18 +585,8 @@\n     \n- retorno =\n  mot\n@@ -604,16 +604,17 @@\n (pessoa)\n+;\n %0A       \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-10-24_01-06-48",
+            "content": "@@ -66,29 +66,40 @@\n main():%0A    \n+while True:%0A\n     \n-%0A\n     motoca: \n@@ -119,24 +119,28 @@\n otoCycle();%0A\n+    \n     pessoa: \n@@ -163,25 +163,8 @@\n );%0A%0A\n-    while True:%0A%0A\n     \n@@ -542,32 +542,73 @@\n %0A               \n+ print(pessoa);%0A                retorno =\n  motoca.inserir(\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-10-24_01-08-54",
+            "content": "@@ -385,10 +385,8 @@\n     \n- #\n  mot\n@@ -428,54 +428,8 @@\n ));%0A\n-                motoca.setPower(int(args%5B1%5D));\n %0A   \n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-10-24_01-10-54",
+            "content": "@@ -377,24 +377,26 @@\n             \n+ #\n  motoca = Mo\n@@ -418,33 +418,36 @@\n  int(args%5B1%5D));%0A\n-%0A\n+    \n             case\n@@ -446,57 +446,64 @@\n     \n+moto\n ca\n+.\n se\n- 'enter':%0A                oldPessoa = pessoa;\n+tPower(int(args%5B1%5D));%0A            case 'enter':\n %0A   \n@@ -605,191 +605,30 @@\n     \n-%0A                if not motoca.inserir(pessoa):%0A                    pessoa = oldPessoa;%0A            %0A                else:%0A                    motoca.inserir(pessoa);%0A                \n+motoca.inserir(pessoa)\n %0A   \n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-10-24_01-17-04",
+            "content": "@@ -609,16 +609,20 @@\n      if \n+not \n motoca.i\n@@ -639,17 +639,8 @@\n soa)\n- == False\n :%0A  \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-24_01-17-32",
+            "content": "@@ -721,46 +721,8 @@\n se:%0A\n-                    motoca.remover();%0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-24_01-18-32",
+            "content": "@@ -111,16 +111,47 @@\n Cycle();\n+%0A    pessoa: Person = Person();\n %0A%0A    wh\n@@ -471,54 +471,99 @@\n     \n-p\n+oldP\n essoa\n-: Person = Person(name = args%5B1%5D, age = \n+ = pessoa;%0A                pessoa.setName(args%5B1%5D);%0A                pessoa.setAge(\n int(\n@@ -585,24 +585,44 @@\n             \n+%0A                if \n motoca.inser\n@@ -627,25 +627,208 @@\n erir(pessoa)\n-;\n+ == False:%0A                    pessoa = oldPessoa;%0A            %0A                else:%0A                    motoca.remover();%0A                    motoca.inserir(pessoa);%0A                \n %0A           \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-24_01-23-17",
+            "content": "from person import Person;\nfrom motocycle import MotoCycle;\n\ndef main():\n        \n    motoca: MotoCycle = MotoCycle();\n\n    while True:\n\n        line: str = input();\n        args: list[str] = line.split(' ');\n        print(f'${line}');\n\n        match args[0]:\n            case 'show':\n                print(motoca);\n\n            case 'init':\n                motoca = MotoCycle(power = int(args[1]));\n\n            case 'enter':\n                pessoa: Person = Person(name = args[1], age = int(args[2]));\n                motoca.inserir(pessoa);\n            \n            case 'leave':\n                oldPessoa = motoca.remover();\n                if oldPessoa is not None:\n                    print(oldPessoa);\n            \n            case 'buy':\n                motoca.buyTime(int(args[1]));\n            \n            case 'drive':\n                motoca.drive(int(args[1]));\n\n            case 'honk':\n                motoca.honk();\n\n            case 'end':\n                break;\n\n            case _:\n                print('fail: comando inv\u00e1lido');\n\nmain();\n\n\n# motocaTeste = MotoCycle();\n# pessoaTeste = Person('Jurandi', 5);\n\n# retortno = motocaTeste.inserir(pessoaTeste);\n# print(retortno);\n",
+            "lines": "52"
+        }
+    ]
+}
