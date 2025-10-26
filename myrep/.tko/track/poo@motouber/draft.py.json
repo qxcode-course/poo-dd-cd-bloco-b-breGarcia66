@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_17-03-50",
+            "content": "@@ -56,946 +56,229 @@\n r;%0A%0A\n-# criando m%C3%A9todo main%0A%0Adef main():%0A    moto: MotoUber = MotoUber();%0A    motorista: Pessoa = None;%0A    passageiro: Pessoa = None;%0A%0A    while True:%0A%0A        line: str = input();%0A        args: list%5Bstr%5D = line.split(' ');%0A        print(f'$%7Bline%7D');%0A%0A        match args%5B0%5D:%0A            case 'show':%0A                print(moto);%0A            %0A            case 'setDriver':%0A                motorista = Pessoa(args%5B1%5D, int(args%5B2%5D));%0A                moto.setMotorista(motorista);%0A%0A            case 'setPass':%0A                passageiro = Pessoa(args%5B1%5D, int(args%5B2%5D));%0A                moto.setPassageiro(passageiro);%0A%0A            case 'leavePass':%0A                oldPassageiro = moto.descerPassageiro();%0A                print(f'%7BoldPassageiro%7D left');%0A%0A            case 'drive':%0A                moto.corrida(int(args%5B1%5D));%0A%0A            case 'end':%0A                break;%0A%0A            case _:%0A                print('fail: comando invalido');%0A%0Amain();\n+driver = Pessoa('Pedro', 30);%0Apassenger = Pessoa('Lucas', 20);%0Amoto = MotoUber(motorista = driver);%0A%0A%0Aprint(moto);%0Amoto.descerPassageiro();%0A%0Amoto.setPassageiro(passenger);%0Aprint(moto);%0A%0Amoto.descerPassageiro();%0Aprint(moto);%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2025-10-26_17-29-03",
+            "content": "from pessoa import Pessoa;\nfrom motoUber import MotoUber;\n\n# criando m\u00e9todo main\n\ndef main():\n    moto: MotoUber = MotoUber();\n    motorista: Pessoa = None;\n    passageiro: Pessoa = None;\n\n    while True:\n\n        line: str = input();\n        args: list[str] = line.split(' ');\n        print(f'${line}');\n\n        match args[0]:\n            case 'show':\n                print(moto);\n            \n            case 'setDriver':\n                motorista = Pessoa(args[1], int(args[2]));\n                moto.setMotorista(motorista);\n\n            case 'setPass':\n                passageiro = Pessoa(args[1], int(args[2]));\n                moto.setPassageiro(passageiro);\n\n            case 'leavePass':\n                oldPassageiro = moto.descerPassageiro();\n                print(f'{oldPassageiro} left');\n\n            case 'drive':\n                moto.corrida(int(args[1]));\n\n            case 'end':\n                break;\n\n            case _:\n                print('fail: comando invalido');\n\nmain();",
+            "lines": "42"
+        }
+    ]
+}

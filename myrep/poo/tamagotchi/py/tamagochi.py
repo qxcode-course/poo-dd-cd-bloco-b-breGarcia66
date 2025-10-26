@@ -3,7 +3,7 @@
 class Tamagochi:
     
     # contrutuor
-    def __init__(self, energyMax: int, cleanMax:int):
+    def __init__(self, energyMax: int = 0, cleanMax:int = 0):
         self.__energyMax: int = energyMax;
         self.__energy: int = energyMax; 
         self.__cleanMax: int = cleanMax;
@@ -34,22 +34,18 @@ class Tamagochi:
         return self.__age;
 
     def isAlive(self) -> bool:
-        return self.__alive;
+        if (self.getClean() == 0) or \
+           (self.getEnergy() == 0):
+            return False;
+
+        return True;
     # fim método de acesso
 
     # método mutante
     def setEnergy(self, value: int):
-        if value < 0:
-            print('fail: valor invalido');
-            return;
-
         self.__energy = value;
 
-    def setClean(self, value: int):
-        if value < 0:
-            print('fail: valor invalido');
-            return;
-        
+    def setClean(self, value: int):        
         self.__clean = value;
 
     def setAge(self, value: int):
@@ -58,7 +54,4 @@ class Tamagochi:
             return;
         
         self.__age = value;
-
-    def setAlive(self, value: bool):
-        self.__alive = value;
     # fim método mutante

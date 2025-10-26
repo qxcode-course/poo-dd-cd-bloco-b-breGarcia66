@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_17-03-50",
+            "content": "# criando classe Pessoa\n\nclass Pessoa:\n    # construtor\n    def __init__(self, nome: str = '', dinheiro: int = 0):\n        self.__nome = nome;\n        self.__dinheiro = dinheiro;\n    # fim construtor\n\n    # m\u00e9todo string\n    def __str__(self) -> str:\n        return f'{self.getNome()}:{self.getDinheiro()}';\n    # fim m\u00e9todo string\n\n    # m\u00e9todo de acesso\n    def getNome(self) -> str:\n        return self.__nome;\n\n    def getDinheiro(self) -> int:\n        return self.__dinheiro;\n    # fim m\u00e9todo de acesso\n\n    # m\u00e9todo mutante\n    def setNome(self, nome: str):\n        self.__nome = nome;\n\n    def setDinheiro(self, valor: int):\n        self.__dinheiro = valor;\n    # fim m\u00e9todo mutante\n",
+            "lines": "29"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_15-36-59",
+            "content": "@@ -94,16 +94,51 @@\n main():%0A\n+    bixo: Tamagochi = Tamagochi();%0A\n     game\n@@ -151,16 +151,20 @@\n  = Game(\n+bixo\n );%0A%0A    \n@@ -271,24 +271,24 @@\n $%7Bline%7D');%0A%0A\n+\n         matc\n@@ -302,210 +302,8 @@\n 0%5D:%0A\n-            case 'init':%0A                bixo: Tamagochi = Tamagochi(int(args%5B1%5D), int(args%5B2%5D));%0A                game.setBixo(bixo);%0A            %0A            case 'show':%0A                print(game);%0A%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-26_15-40-30",
+            "content": "@@ -465,191 +465,8 @@\n );%0A%0A\n-            case 'play':%0A                game.play();%0A%0A            case 'sleep':%0A                game.sleep();%0A            %0A            case 'shower':%0A                game.shower();%0A%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-26_15-42-24",
+            "content": "from tamagochi import Tamagochi;\nfrom game import Game;\n\n# desenvolvendo m\u00e9todo main();\n\ndef main():\n    game: Game = Game();\n\n    while True:\n        line: str = input();\n        args: list[str] = line.split(' ');\n        print(f'${line}');\n\n        match args[0]:\n            case 'init':\n                bixo: Tamagochi = Tamagochi(int(args[1]), int(args[2]));\n                game.setBixo(bixo);\n            \n            case 'show':\n                print(game);\n\n            case 'play':\n                game.play();\n\n            case 'sleep':\n                game.sleep();\n            \n            case 'shower':\n                game.shower();\n\n            case 'end':\n                break;\n\n            case _:\n                print('fail: comando invalido');\n\nmain();",
+            "lines": "37"
+        }
+    ]
+}

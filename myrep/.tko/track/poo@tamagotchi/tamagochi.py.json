@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_15-36-59",
+            "content": "# criando classe Tamagochi\n\nclass Tamagochi:\n    \n    # contrutuor\n    def __init__(self, energyMax: int = 0, cleanMax:int = 0):\n        self.__energyMax: int = energyMax;\n        self.__energy: int = energyMax; \n        self.__cleanMax: int = cleanMax;\n        self.__clean: int = cleanMax;    \n        self.__age: int = 0;\n        self.__alive: bool = True;\n    # fim contrutor\n\n    # m\u00e9todo string\n    def __str__(self) -> str:\n        return f'E:{self.getEnergy()}/{self.getEnergyMax()}, L:{self.getClean()}/{self.getCleanMax()}, I:{self.getAge()}';\n    # fim m\u00e9tdodo string\n\n    # m\u00e9todo de acesso\n    def getEnergyMax(self) -> int:\n        return self.__energyMax;\n    \n    def getEnergy(self) -> int:\n        return self.__energy;\n    \n    def getCleanMax(self) -> int:\n        return self.__cleanMax;\n    \n    def getClean(self) -> int:\n        return self.__clean;\n\n    def getAge(self) -> int:\n        return self.__age;\n\n    def isAlive(self) -> bool:\n        if (self.getClean() == 0) or \\\n           (self.getEnergy() == 0):\n            return False;\n\n        return True;\n    # fim m\u00e9todo de acesso\n\n    # m\u00e9todo mutante\n    def setEnergy(self, value: int):\n        self.__energy = value;\n\n    def setClean(self, value: int):        \n        self.__clean = value;\n\n    def setAge(self, value: int):\n        if value < 0:\n            print('fail: valor invalido');\n            return;\n        \n        self.__age = value;\n    # fim m\u00e9todo mutante",
+            "lines": "57"
+        }
+    ]
+}
