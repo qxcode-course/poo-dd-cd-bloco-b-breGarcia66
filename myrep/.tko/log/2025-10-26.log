@@ -14,3 +14,15 @@
 2025-10-26 17:31:40, MOVE, v:1, k:poo@motouber, mode:BACK
 2025-10-26 17:32:14, SELF, v:1, k:poo@tamagotchi, rate:100, other:sim, alone:9, study:120
 2025-10-26 17:32:38, SELF, v:1, k:poo@motouber, rate:100, alone:10, study:90
+2025-10-26 19:20:12, MOVE, v:1, k:poo@grafite, mode:DOWN
+2025-10-26 19:44:12, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-26 19:44:14, EXEC, v:1, k:poo@grafite, mode:FREE, size:72
+2025-10-26 19:44:41, EXEC, v:1, k:poo@grafite, mode:FREE, size:72
+2025-10-26 20:23:41, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:181
+2025-10-26 20:24:05, EXEC, v:1, k:poo@grafite, mode:FULL, rate:10, size:184
+2025-10-26 20:25:44, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:184
+2025-10-26 20:27:07, EXEC, v:1, k:poo@grafite, mode:FULL, rate:70, size:184
+2025-10-26 20:27:20, EXEC, v:1, k:poo@grafite, mode:FREE
+2025-10-26 20:30:40, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-26 20:30:41, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-26 20:30:42, MOVE, v:1, k:poo@grafite, mode:BACK

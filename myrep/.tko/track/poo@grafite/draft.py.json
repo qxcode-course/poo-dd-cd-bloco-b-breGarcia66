@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_19-44-14",
+            "content": "@@ -69,11 +69,8 @@\n int(\n-f'%7B\n lead\n@@ -88,10 +88,6 @@\n ge()\n-%7Dmm'\n );\n",
+            "lines": "7"
+        },
+        {
+            "label": "2025-10-26_19-44-41",
+            "content": "@@ -20,761 +20,81 @@\n ad;%0A\n-from pencil import Pencil;%0A%0A# criando m%C3%A9todo main%0A%0Adef main():%0A    pencil: Pencil = Pencil();%0A%0A    while True:%0A%0A        line: str = input();%0A        args: list%5Bstr%5D = line.split(' ');%0A        print(f'$%7Bline%7D');%0A%0A        match args%5B0%5D:%0A            case 'init':%0A                pencil = Pencil(float(args%5B1%5D));%0A            %0A            case 'show':%0A                print(pencil);%0A%0A            case 'insert':%0A                lead: Lead = Lead(float(args%5B1%5D), args%5B2%5D, int(args%5B3%5D));%0A                pencil.insert(Lead);%0A%0A            case 'remove':%0A                pencil.remove();%0A%0A            case 'write':%0A                pencil.writePage();%0A%0A            case 'end':%0A                break;%0A%0A            case _:%0A                print('fail: comando inalido\n+%0Alead = Lead(0.5, 'HB', 6);%0A%0Aprint(lead);%0A%0Aprint(f'%7Blead.usagePerPage()%7Dmm\n ');\n",
+            "lines": "7"
+        },
+        {
+            "label": "2025-10-26_20-23-41",
+            "content": "@@ -777,33 +777,4 @@\n o');\n-%0A%0A# executando main()%0Amain();\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-10-26_20-24-05",
+            "content": "@@ -526,17 +526,17 @@\n .insert(\n-l\n+L\n ead);%0A%0A \n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-10-26_20-25-44",
+            "content": "from lead import Lead;\nfrom pencil import Pencil;\n\n# criando m\u00e9todo main\n\ndef main():\n    pencil: Pencil = Pencil();\n\n    while True:\n\n        line: str = input();\n        args: list[str] = line.split(' ');\n        print(f'${line}');\n\n        match args[0]:\n            case 'init':\n                pencil = Pencil(float(args[1]));\n            \n            case 'show':\n                print(pencil);\n\n            case 'insert':\n                lead: Lead = Lead(float(args[1]), args[2], int(args[3]));\n                pencil.insert(lead);\n\n            case 'remove':\n                pencil.remove();\n\n            case 'write':\n                pencil.writePage();\n\n            case 'end':\n                break;\n\n            case _:\n                print('fail: comando inalido');\n\n# executando main()\nmain();",
+            "lines": "39"
+        }
+    ]
+}

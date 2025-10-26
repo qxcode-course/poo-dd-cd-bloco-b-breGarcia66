@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_19-44-14",
+            "content": "@@ -790,24 +790,25 @@\n il: \n-calibre invalida\n+invalid thickness\n ');%0A\n@@ -1051,23 +1051,24 @@\n il: \n-dureza invalida\n+invalid hardness\n ');%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-10-26_20-23-41",
+            "content": "# criand classe Lead\n\nclass Lead:\n    \n    # construtor\n    def __init__(self, thickness: float = 0.0, hardness: str = '', size: int = 0):\n        self.__thickness: float = thickness;\n        self.__hardness: str = hardness;\n        self.__size: int = size;\n    # fim construtor\n\n    # m\u00e9todo string\n    def __str__(self) -> str:\n        return f'[{self.getThickness()}:{self.getHardness()}:{self.getSize()}]';\n    # fim m\u00e9todo string\n\n    # m\u00e9todo de acesso\n    def getThickness(self) -> float:\n        return self.__thickness;\n\n    def getHardness(self) -> str:\n        return self.__hardness;\n\n    def getSize(self) -> int:\n        return self.__size;\n    # fim m\u00e9todo de acesso\n\n    # m\u00e9todo mutante\n    def setThickness(self, value: float):\n        if value < 0:\n            print('fail: calibre invalida');\n            return;\n\n        self.__thickness = value;\n\n    def setHardness(self, value: str):\n        availableHardnesses: list[str] = ['HB', '2B', '4B', '6B'];\n        if value.upper() not in availableHardnesses:\n            print('fail: dureza invalida');\n            return;\n\n        self.__hardness = value;\n\n    def setSize(self, value: int):\n        self.__size = 0; \n    # fim m\u00e9todo mutante\n\n    # m\u00e9todo do objeto\n    def usagePerPage(self):\n        match self.getHardness():\n            case 'HB':\n                return 1;\n            \n            case '2B':\n                return 2\n\n            case '4B':\n                return 4;\n            \n            case '6B':\n                return 6;\n\n            case _:\n                return;\n    # fim m\u00e9todo do objeto",
+            "lines": "65"
+        }
+    ]
+}
