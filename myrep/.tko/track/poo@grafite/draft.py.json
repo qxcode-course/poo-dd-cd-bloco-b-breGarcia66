@@ -22,7 +22,12 @@
         },
         {
             "label": "2025-10-26_20-25-44",
-            "content": "from lead import Lead;\nfrom pencil import Pencil;\n\n# criando m\u00e9todo main\n\ndef main():\n    pencil: Pencil = Pencil();\n\n    while True:\n\n        line: str = input();\n        args: list[str] = line.split(' ');\n        print(f'${line}');\n\n        match args[0]:\n            case 'init':\n                pencil = Pencil(float(args[1]));\n            \n            case 'show':\n                print(pencil);\n\n            case 'insert':\n                lead: Lead = Lead(float(args[1]), args[2], int(args[3]));\n                pencil.insert(lead);\n\n            case 'remove':\n                pencil.remove();\n\n            case 'write':\n                pencil.writePage();\n\n            case 'end':\n                break;\n\n            case _:\n                print('fail: comando inalido');\n\n# executando main()\nmain();",
+            "content": "@@ -765,17 +765,16 @@\n mando in\n-v\n alido');\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-10-27_02-31-12",
+            "content": "from lead import Lead;\nfrom pencil import Pencil;\n\n# criando m\u00e9todo main\n\ndef main():\n    pencil: Pencil = Pencil();\n\n    while True:\n\n        line: str = input();\n        args: list[str] = line.split(' ');\n        print(f'${line}');\n\n        match args[0]:\n            case 'init':\n                pencil = Pencil(float(args[1]));\n            \n            case 'show':\n                print(pencil);\n\n            case 'insert':\n                lead: Lead = Lead(float(args[1]), args[2], int(args[3]));\n                pencil.insert(lead);\n\n            case 'remove':\n                pencil.remove();\n\n            case 'write':\n                pencil.writePage();\n\n            case 'end':\n                break;\n\n            case _:\n                print('fail: comando invalido');\n\n# executando main()\nmain();",
             "lines": "39"
         }
     ]

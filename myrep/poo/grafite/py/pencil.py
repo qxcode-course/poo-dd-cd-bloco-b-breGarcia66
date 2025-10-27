@@ -29,6 +29,8 @@ class Pencil:
             print('fail: invlalid thickness');
             return;
 
+        self.__thickness = value;
+
     def setTip(self, obj: Lead):
         self.__tip = obj;
     # fim método mutante
@@ -53,7 +55,7 @@ class Pencil:
         return True;
 
     def remove(self) -> Lead | None:
-        if self.getTip is None:
+        if self.getTip() is None:
             print('fail: ja esta sem grafite');    
             return;
 

@@ -42,7 +42,7 @@ class Lead:
         self.__hardness = value;
 
     def setSize(self, value: int):
-        self.__size = 0; 
+        self.__size = value; 
     # fim método mutante
 
     # método do objeto
